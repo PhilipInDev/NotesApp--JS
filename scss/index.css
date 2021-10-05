@@ -10,4 +10,33 @@
   flex-direction: column;
 }
 
+.table-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px 10px 70px;
+  background-color: #569adf;
+  font-family: sans-serif;
+}
+.table-header__title-box {
+  width: 100%;
+}
+.table-header__title {
+  text-align: left;
+  color: #fbfbfc;
+  font-weight: 700;
+}
+.table-header__controllers-box {
+  display: flex;
+}
+.table-header__controllers-box i {
+  margin-left: 15px;
+  font-size: 19px;
+  color: #fbfbfc;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.table-header__controllers-box i:hover {
+  opacity: 0.8;
+}
+
 /*# sourceMappingURL=index.css.map */

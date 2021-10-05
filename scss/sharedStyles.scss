@@ -1,0 +1,12 @@
+$iconsFz: 19px;
+$tableHeaderBgColor: #569adf;
+
+@mixin iconsCS($iconColor){
+  font-size: $iconsFz;
+  color: $iconColor;
+  cursor: pointer;
+  transition: .1s;
+  &:hover{
+    opacity: 0.8;
+  }
+}

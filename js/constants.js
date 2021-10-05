@@ -14,3 +14,7 @@ export const noteShape = {
 }
 export const columnNames = ['Name', 'Created', 'Category', 'Content', 'Dates'];
 export const columnNamesStatistic = ['Note Category', 'Active', 'Archived'];
+export const mainTableBox = document.querySelector('.main-table-box');
+export const activeNotesBox = document.querySelector('.active-notes');
+export const archivedNotesBox = document.querySelector('.archived-notes');
+export const statisticTableBox = document.querySelector('.statistic-table')

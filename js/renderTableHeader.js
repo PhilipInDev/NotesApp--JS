@@ -1,6 +1,6 @@
 export const RenderTableHeader = (columnNames, shouldAddControllers = false) => {
     const tableHeader = document.createElement('div');
-    tableHeader.classList.add('table-header')
+    tableHeader.classList.add('table-header');
     columnNames.forEach((name) => tableHeader.append(createColumnTitle(name)));
     if(shouldAddControllers){
         tableHeader.append(createColumnControllerPanel());
@@ -23,8 +23,10 @@ const createColumnControllerPanel = () => {
     controllersBox.classList.add('table-header__controllers-box');
     const archiveAllBtn = document.createElement('i');
     archiveAllBtn.classList.add('fas', 'fa-file-archive');
+    archiveAllBtn.setAttribute('id', 'archiveAllBtn');
     const deleteAllBtn = document.createElement('i');
     deleteAllBtn.classList.add('fas', 'fa-trash-alt');
+    archiveAllBtn.setAttribute('id', 'deleteAllBtn');
     controllersBox.append(archiveAllBtn, deleteAllBtn);
 
     return controllersBox;

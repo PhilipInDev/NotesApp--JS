@@ -28,10 +28,10 @@ const createColumnControllerPanel = () => {
     const controllersBox = createElement('div', 'table-header__controllers-box');
 
     const archiveAllBtn = createElement('i', ['fas', 'fa-file-archive'], 'archiveAllBtn');
-    archiveAllBtn.setAttribute('title', 'Archive all');
+    archiveAllBtn.setAttribute('title', 'Archive/Unzip All');
 
     const deleteAllBtn = createElement('i', ['fas', 'fa-trash-alt'], 'deleteAllBtn');
-    deleteAllBtn.setAttribute('title', 'Delete all');
+    deleteAllBtn.setAttribute('title', 'Delete All');
 
     controllersBox.append(archiveAllBtn, deleteAllBtn);
     return controllersBox;

@@ -12,15 +12,23 @@
 <body>
     <div class="wrapper">
         <div class="main-table-box">
+            <div class="main-table-box__slider">
+                <div class="active-notes notes-box current-slide">
+                    <span class="notes-box__label">Active Notes:</span>
+                </div>
 
-            <div class="active-notes"></div>
-
-            <div class="archived-notes">
-                <span class="archived-notes__show-btn"></span>
+                <div class="archived-notes notes-box">
+                    <span class="notes-box__label">Archived Notes:</span>
+                </div>
             </div>
-            <button class="create-note-btn">Create Note</button>
+            <div class="main-table-box__controllers">
+                <button class="create-note-btn">Create Note</button>
+                <button class="shift-table-btn">
+                    <span class="shift-table-btn__arrow-box"></span>
+                </button>
+            </div>
         </div>
-        <div class="statistic-table">
+        <div class="stat-table">
 
         </div>
     </div>

@@ -6,7 +6,7 @@ export const createElement = (type = '', classes = [], id = '') => {
     const el = document.createElement(type);
     if (Array.isArray(classes) && classes.length) {
         el.classList.add(...classes);
-    }else if(!Array.isArray(classes) && classes) el.classList.add(classes);
+    } else if (!Array.isArray(classes) && classes) el.classList.add(classes);
     if (id) el.setAttribute('id', id);
 
     return el;
@@ -36,7 +36,7 @@ export const createItemSelect = (options = [], selected, id) => {
         optionEl = createElement('option');
         optionEl.value = selectCorrespondingCategoryKey(option);
         optionEl.textContent = option;
-        if(selected === option) optionEl.setAttribute('selected', 'true');
+        if(selected === option) optionEl.selected = true;
         select.append(optionEl);
     });
 
@@ -68,7 +68,8 @@ export const createItemCategoryIcon = (category) => {
 //Selectors
 export const getIdNumFromElementIdSelector = (idSelector) => {
     const regExp = /^\d+/;
-    return idSelector.match(regExp)[0];
+    const idNum = idSelector.match(regExp);
+    return idNum[0];
 }
 export const selectNoteItemById = (eventIdSelector) => {
     const idNum = getIdNumFromElementIdSelector(eventIdSelector);

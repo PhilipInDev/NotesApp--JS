@@ -3,11 +3,13 @@
 .table-header{
   display: flex;
   justify-content: space-around;
-  padding: 10px 10px 10px 70px;
+  position: relative;
+  padding: 10px 90px ;
   background-color: $tableHeaderBgColor;
   font-family: sans-serif;
   &__title-box{
     width: 100%;
+    padding-left: 4px;
   }
   &__title{
     text-align: left;
@@ -16,6 +18,10 @@
   }
   &__controllers-box{
     display: flex;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -$iconsFz / 2 ;
     i{
       margin-left: 15px;
       @include iconsCS(#fbfbfc);

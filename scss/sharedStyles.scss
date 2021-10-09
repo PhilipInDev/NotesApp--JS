@@ -1,5 +1,6 @@
 $iconsFz: 19px;
 $tableHeaderBgColor: #569adf;
+$borderColor: #6caeef;
 
 @mixin iconsCS($iconColor){
   font-size: $iconsFz;
@@ -8,5 +9,51 @@ $tableHeaderBgColor: #569adf;
   transition: .1s;
   &:hover{
     opacity: 0.8;
+  }
+}
+@mixin inputReset(){
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  outline: 0;
+  box-sizing: border-box;
+  padding: 0;
+  box-shadow: none;
+}
+@mixin btnReset() {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+@mixin btnCS($hoverColor){
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: .2s;
+  &:hover{
+    box-shadow: 3px 3px 0 0 $hoverColor;
+  }
+  &:active{
+    box-shadow: none;
+  }
+}
+@mixin flexCenter(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin tableItemCS(){
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 90px;
+  height: 80px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: default;
+  transition: .1s;
+  &:hover{
+    box-shadow: 1px 1px 5px $tableHeaderBgColor;
   }
 }

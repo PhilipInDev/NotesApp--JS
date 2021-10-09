@@ -1,3 +1,5 @@
+@import "sharedStyles";
+
 .wrapper{
   max-width: 1200px;
   height: 100%;
@@ -7,4 +9,99 @@
 .main-table-box{
     display: flex;
     flex-direction: column;
+    &__slider{
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      .current-slide{
+        width: 100% !important;
+        opacity: 1 !important;
+        flex: 1 0 100%;
+      }
+    }
+    &__controllers{
+      margin-top: 20px;
+      padding: 10px 10px;
+      display: flex;
+      justify-content: flex-end;
+      button{
+        margin-left: 20px;
+      }
+    }
+}
+.shift-table-btn{
+  @include btnReset;
+  @include btnCS(#8ec7fd);
+  background-color: $borderColor;
+  &__arrow-box{
+    position: relative;
+    transition: .2s;
+    display: block;
+    height: 100%;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      margin-right: -9px;
+      height: 3px;
+      width: 15px;
+      background-color: white;
+    }
+    &:before{
+      margin-top: -5px;
+      transform: rotate(40deg);
+    }
+    &:after{
+      margin-top: 3px;
+      transform: rotate(-40deg);
+    }
+  }
+}
+.active{
+  .shift-table-btn__arrow-box{
+    transform: rotateY(180deg);
+  }
+}
+.create-note-btn {
+  @include btnReset;
+  @include btnCS(#7fff6b);
+  background-color: limegreen;
+  font-family: inherit;
+  font-weight: 700;
+  color: white;
+}
+.disabled{
+  pointer-events: none;
+  cursor: default;
+}
+.notes-box{
+  height: 400px;
+  min-height: min-content;
+  overflow: auto;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  opacity: 0;
+  width: 0;
+    &__label{
+    order: -1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: block;
+    padding: 7px 10px;
+    background-color: white;
+    box-shadow: 1px 0 2px $tableHeaderBgColor;
+    font-style: italic;
+    font-size: 15px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    flex: 0 0 15px;
+    width: 100%;
+  }
 }

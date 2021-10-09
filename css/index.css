@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "css/reset.css";
 .wrapper {
   max-width: 1200px;
   height: 100%;
@@ -227,6 +227,7 @@
 }
 .note-item__text {
   display: block;
+  font-family: inherit;
 }
 .note-item__select {
   font-size: 15px;

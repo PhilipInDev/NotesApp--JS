@@ -41,6 +41,7 @@ $fieldsFz: 15px;
   }
   &__text{
     display: block;
+    font-family: inherit;
   }
   &__select{
     font-size: $fieldsFz;

@@ -33,7 +33,6 @@ export const toggleEditNoteOnEvent = (noteItem) => {
 }
 export const updateStats = () => {
     const stats = Object.keys(categories).map(cat => countNotesByCategory(cat));
-    debugger
     stats.forEach(stat => {
         setStatItemDataByCategory([stat.category], { active: stat.active, archived: stat.archived });
     })
